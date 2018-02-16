@@ -1,0 +1,23 @@
+{
+  "name": "reaccionestudio_web",
+  "version": "1.0.0",
+  "description": "Reaccion Estudio Website ====================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReaccionEstudio/reaccionestudio_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReaccionEstudio/reaccionestudio_website/issues"
+  },
+  "homepage": "https://github.com/ReaccionEstudio/reaccionestudio_website#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.19.0",
+    "webpack-notifier": "^1.5.1"
+  }
+}
