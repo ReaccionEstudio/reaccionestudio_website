@@ -15,14 +15,18 @@ var files = [
 	'./assets/js/prefixfree.min.js',
 
 	// CSS
-	'./assets/css/animate.css',
 	'./assets/css/bootstrap.min.css',
 	'./assets/css/font-awesome.min.css',
-	'./assets/css/modal-video.min.css',
-	'./assets/css/nice-select.css',
-	'./assets/css/normalize.css',
 	'./assets/css/owl.carousel.min.css',
+	'./assets/css/modal-video.min.css',
+	'./assets/css/animate.css',
+	'./assets/css/normalize.css',
+	'./assets/css/nice-select.css',
+	'./assets/css/style.css',
 	'./assets/css/responsive.css',
+
+	// IMAGES
+	'./assets/img/logo.png'
 
 ];
 
