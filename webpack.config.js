@@ -2,7 +2,7 @@ var Encore = require('@symfony/webpack-encore');
 
 var jsFiles = [
 
-	'./assets/js/jquery.3.2.1.min.js',
+	//'./assets/js/jquery.3.2.1.min.js',
 	'./assets/js/jquery.nice-select.js',
 	'./assets/js/bootstrap.min.js',
 	'./assets/js/loadmore.js',
@@ -25,6 +25,9 @@ Encore
 
     // will create public/build/app.js and public/build/app.css
     .addEntry('app', jsFiles)
+
+    // allow legacy applications to use $/jQuery as a global variable
+    .autoProvidejQuery()
 
     .enableSourceMaps(!Encore.isProduction())
 
