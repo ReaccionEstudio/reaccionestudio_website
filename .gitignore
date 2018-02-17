@@ -13,3 +13,7 @@
 ### custom rules ###
 theme/*
 node_modules/*
+public/build/fonts/*
+public/build/images/*
+public/build/app.css
+public/build/app.js
