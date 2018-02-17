@@ -6,19 +6,14 @@
         <meta charset="UTF-8">
         <title>{% block title %}Reacción Estudio{% endblock %}</title>
         
-        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="./assets/css/font-awesome.min.css">
-		<link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="./assets/css/modal-video.min.css">
-		<link rel="stylesheet" href="./assets/css/animate.css">
-		<link rel="stylesheet" href="./assets/css/normalize.css">
-		<link rel="stylesheet" href="./style.css">
-		<link rel="stylesheet" href="./assets/css/responsive.css">
+        <link rel="stylesheet" href="./build/app.css">
         {% block stylesheets %}{% endblock %}
 
     </head>
 
     <body>
+
+    	{% embed 'header.html.twig' %}{% endembed %}
 
         {% block body %}{% endblock %}
 
