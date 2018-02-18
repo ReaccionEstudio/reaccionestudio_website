@@ -44,6 +44,8 @@ Encore
     // allow legacy applications to use $/jQuery as a global variable
     .autoProvidejQuery()
 
+    .autoProvideVariables({ Popper: ['popper.js', 'default'] })
+
     .enableSourceMaps(!Encore.isProduction())
 
     // empty the outputPath dir before each build

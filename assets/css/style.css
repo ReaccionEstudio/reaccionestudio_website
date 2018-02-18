@@ -61,10 +61,8 @@ img.logo {
 }
 
 .header-area {
-	background-image: url(../img/header-bg.jpg);
 	background-size: cover;
 	background-position: center;
-	height: 1080px;
 	position: relative;
 	z-index: 3;
 }
@@ -1188,7 +1186,7 @@ a.scroll-down:hover {
 /*why Misocial Style*/
 
 .whymisocial.header-area {
-	background-image: url(../img/whymisocial/hero-bg.jpg)
+	
 }
 
 .whymisocial .hero-text h6 {
@@ -1249,7 +1247,7 @@ a.scroll-down:hover {
 /*Features Style*/
 
 .feature-page.header-area {
-	background-image: url(../img/features/feature-hero-bg.jpg)
+	
 }
 
 .feature-page.header-area {
@@ -1421,7 +1419,7 @@ a.scroll-down:hover {
 /*Pricing page*/
 
 .pricing.header-area {
-	background-image: url(../img/pricing/pricing-hero-bg.jpg)
+	
 }
 
 .pricing-box-bg-1 {
@@ -1716,7 +1714,7 @@ i.user-comments.cmnts-color-two {
 /*Get Started*/
 
 .get-start.header-area {
-	background-image: url(../img/getstrated/hero-bg-1.jpg);
+	
 }
 
 
@@ -1836,7 +1834,7 @@ button[type=submit]:hover {
 /*Single-blog*/
 
 .single-blog.header-area {
-	background-image: url(../img/single-blog/single-blog-hero-bg.jpg)
+	
 }
 
 .single-blog {
