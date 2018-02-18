@@ -248,7 +248,15 @@ a.scroll-down:hover {
 	color: #fff;
 }
 
+.servicios {
+	background: #ecf0f4;
+	padding: 80px 0;
+	position: relative;
+	z-index: 1;
+}
+
 /*Choose US*/
+
 
 .choose-us {
 	background: #ecf0f4;
@@ -1146,7 +1154,6 @@ a.scroll-down:hover {
 }
 
 /*Back to top*/
-
 .back-to-top {
 	position: fixed;
 	bottom: 65px;
