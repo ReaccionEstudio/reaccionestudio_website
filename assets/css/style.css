@@ -1499,6 +1499,10 @@ a.price-btn:hover {
 	margin-top: 160px
 }
 
+.header-top .navbar{
+	background: #7362de !important;
+}
+
 /*articles area*/
 
 .articles.header-area {
@@ -1520,7 +1524,7 @@ a.price-btn:hover {
 .articles .navbar-light .navbar-nav .show > .nav-link,
 .articles .navbar-light .navbar-nav .nav-link:focus,
 .articles .navbar-light .navbar-nav .nav-link:hover {
-	color: #000
+	color: #000;
 }
 
 .articles .mainmenu li.active:not(:last-child):after,
