@@ -10,7 +10,6 @@ jQuery(document).ready(function ($) {
 
 
 	//On scroll header add background
-	/*
 	$(window).scroll(function () {
 		var a = 10;
 		var pos = $(window).scrollTop();
@@ -46,7 +45,6 @@ jQuery(document).ready(function ($) {
 			$(".articles .header-top .navbar").removeClass("animated slideInDown");
 		}
 	});
-	*/
 
 	//Feautes Slider
 	$(".features-slider").owlCarousel({

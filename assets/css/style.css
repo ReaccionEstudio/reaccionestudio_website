@@ -63,7 +63,7 @@ img.logo {
 .header-area {
 	background-size: cover;
 	background-position: center;
-	position: relative;
+	position: fixed;
 	z-index: 3;
 }
 
@@ -1514,10 +1514,6 @@ a.price-btn:hover {
 
 .pricing .control-text {
 	margin-top: 160px
-}
-
-.header-top .navbar{
-	background: #7362de !important;
 }
 
 /*articles area*/
