@@ -330,7 +330,7 @@ a.scroll-down:hover {
 	background: linear-gradient(135deg, rgba(110, 69, 226, 1) 0%, rgba(136, 211, 206, 1) 99%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e45e2', endColorstr='#88d3ce', GradientType=1);
 	color: #fff;
-	padding: 120px 0 330px;
+	padding: 120px 0 0;
 }
 
 .single-feature-items i.fa {
@@ -1054,6 +1054,12 @@ a.scroll-down:hover {
 }
 
 /*Control*/
+
+.rocket-bg{
+	background-image: url('../img/rocket-bg.jpg');
+	background-position: 50% 40%;
+	height: 530px !important;
+}
 
 .control-bg {
 	background: url(../img/control-bg.jpg)
