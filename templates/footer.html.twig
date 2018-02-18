@@ -5,7 +5,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-4">
-					<a href="" class="logo-footer"><img src="./assets/img/footer-logo.png" alt=""></a>
+					<a href="" class="logo-footer"><img src="{{ asset('images/footer-logo.png') }}" alt=""></a>
 				</div>
 				<div class="col-lg-8">
 					<div class="footer-menu">
@@ -37,7 +37,7 @@
 		<div class="row">
 			<div class="col-lg-8 text-left">
 				<div class="copyright">
-					<p>© 2017 Mass Impressions &amp; Tranmautritam. Make the right impression.</p>
+					<p>© {{ "now" | date("Y") }} Reacción Estudio.</p>
 				</div>
 			</div>
 			<div class="col-lg-4 text-right">
