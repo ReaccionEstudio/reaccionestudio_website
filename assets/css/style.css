@@ -1311,6 +1311,10 @@ a.scroll-down:hover {
 
 /*Beneefits area*/
 
+div.choose-us div.choose-text p{
+	color: #4f4f6f;
+}
+
 .benefits.choose-us {
 	background-image: url(../img/features/benefits-bg.jpg);
 	background-size: cover;
