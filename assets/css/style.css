@@ -825,7 +825,7 @@ a.scroll-down:hover {
 	margin-top: 7px;
 }
 
-.team-area {
+.tech-area {
 	padding: 120px 0;
 	border-bottom: 1px solid #e3e6ee;
 	position: relative;
@@ -839,6 +839,12 @@ a.scroll-down:hover {
 
 .single-team-box {
 	margin-bottom: 60px;
+}
+
+div.tech-area div.team-title p,
+div.contact-area div.start-title p
+{
+	color: #4f4f6f;
 }
 
 
