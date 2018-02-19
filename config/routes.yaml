@@ -5,3 +5,13 @@ home:
 contact:
     path: /contacto
     controller: App\Controller\ContactController::index
+
+sendContactEmail:
+    path: /send-contact-email
+    controller: App\Controller\SendContactEmailController::index
+    methods: POST
+    options:
+      expose: true
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

@@ -1,6 +1,24 @@
-jQuery(document).ready(function ($) {
+/* FOSJsRoutingBundle */
 
+const routes = require('../../public/js/fos_js_routes.json');
 
+import Routing 		from '../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
+import ContactForm 	from './contactForm.js';
+
+Routing.setRoutingData(routes);
+
+/* End FOSJsRoutingBundle */
+
+jQuery(document).ready(function ($) 
+{
+	// home contact form
+	$("form#home-contact-form").on("submit", function(event)
+	{
+		event.preventDefault();
+
+		let contactForm = new ContactForm(Routing);
+			contactForm.homeContactFormEvent();
+	});
 
 	//navbar click add class active
 	$(".navbar-nav").on("click", "li", function () {

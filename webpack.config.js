@@ -7,12 +7,13 @@ var files = [
 	'./assets/js/jquery.nice-select.js',
 	'./assets/js/bootstrap.min.js',
 	'./assets/js/loadmore.js',
-	'./assets/js/main.js',
 	'./assets/js/modal-video.js',
 	'./assets/js/niceselect-activate.js',
 	'./assets/js/owl.carousel.min.js',
 	'./assets/js/popper.min.js',
 	'./assets/js/prefixfree.min.js',
+	'./assets/js/contactForm.js',
+	'./assets/js/main.js',
 
 	// CSS
 	'./assets/css/bootstrap.min.css',
@@ -28,7 +29,8 @@ var files = [
 	'./node_modules/devicon/devicon-colors.css',
 
 	// IMAGES
-	'./assets/img/logo.png'
+	'./assets/img/logo.png',
+	'./assets/img/python-logo.jpg'
 
 ];
 
