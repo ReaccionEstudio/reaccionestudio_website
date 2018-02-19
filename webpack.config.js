@@ -24,6 +24,8 @@ var files = [
 	'./assets/css/nice-select.css',
 	'./assets/css/style.css',
 	'./assets/css/responsive.css',
+	'./node_modules/devicon/devicon.min.css',
+	'./node_modules/devicon/devicon-colors.css',
 
 	// IMAGES
 	'./assets/img/logo.png'
