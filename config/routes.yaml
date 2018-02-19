@@ -6,6 +6,10 @@ contact:
     path: /contacto
     controller: App\Controller\ContactController::index
 
+services:
+    path: /servicios
+    controller: App\Controller\ServicesController::index
+
 sendContactEmail:
     path: /send-contact-email
     controller: App\Controller\SendContactEmailController::index

@@ -1066,7 +1066,14 @@ div.contact-area div.start-title p
 	background-position: 50% 40%;
 	height: 300px !important;
 }
-.contact-bg .control-text{
+.services-bg{
+	background-image: url('../img/services-bg.jpg');
+	background-position: 50% 40%;
+	height: 300px !important;
+}
+.contact-bg .control-text,
+.services-bg .control-text
+{
 	margin-top: 110px !important;
 }
 
