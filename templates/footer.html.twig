@@ -10,7 +10,7 @@
 				<div class="col-lg-8">
 					<div class="footer-menu">
 						<ul>
-							<li class="active">
+							<li class="{% if app.request.get('_route') == 'home' %}active{% endif %}">
 								<a href="{{ url('home') }}" title="Inicio">Inicio</a>
 							</li>
 							<li>
