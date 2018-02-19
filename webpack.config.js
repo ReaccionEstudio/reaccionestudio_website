@@ -26,11 +26,7 @@ var files = [
 	'./assets/css/style.css',
 	'./assets/css/responsive.css',
 	'./node_modules/devicon/devicon.min.css',
-	'./node_modules/devicon/devicon-colors.css',
-
-	// IMAGES
-	'./assets/img/logo.png',
-	'./assets/img/python-logo.jpg'
+	'./node_modules/devicon/devicon-colors.css'
 
 ];
 
