@@ -15,21 +15,55 @@ class ContactForm
 
 		if( name.val().length && email.val().length && mssg.val().length )
 		{
-			$.post(sendEmailRoute, 
-			{
-				"name" 	: name.val(),
-				"email" : email.val(),
-				"mssg" 	: mssg.val()
-			}, 
-			function(result)
-			{
-				if(result.status == "OK")
-				{
+			$("form#home-contact-form div.alert").remove();
+			$("form#home-contact-form button[type='submit']").hide();
+			$("form#home-contact-form button[type='submit']").after(
+				'<i class="fa fa-refresh fa-spin" style="font-size:38px;"></i>'
+			);
 
-				}
-				else
+			$.ajax(
+			{
+				type: 	"POST",
+				url: 	sendEmailRoute,
+				data: {
+					"name" 	: name.val(),
+					"email" : email.val(),
+					"mssg" 	: mssg.val()
+				},
+				success: function(result)
 				{
-					
+					if(result.STATUS == "OK")
+					{
+						$("form#home-contact-form").prepend(
+							'<div class="alert alert-success">\
+								<p>Su mensaje se ha enviado correctamente. Nos pondremos en contacto con usted lo antes posible. Gracias.</p>\
+							</div>'
+						);
+					}
+					else
+					{
+						$("form#home-contact-form").prepend(
+							'<div class="alert alert-danger">\
+								<p>Se ha producido un error al enviar el mesaje.<br />Por favor, inténtelo de nuevo.</p>\
+							</div>'
+						);
+					}
+
+					$("form#home-contact-form").find("i.fa-refresh").remove();
+					$("form#home-contact-form button[type='submit']").show();
+				},
+				error: function (err)
+				{
+					$("form#home-contact-form").prepend(
+						'<div class="alert alert-danger">\
+							<p>Se ha producido un error al enviar el mesaje.<br />Por favor, inténtelo de nuevo.</p>\
+						</div>'
+					);
+
+					$("form#home-contact-form").find("i.fa-refresh").remove();
+					$("form#home-contact-form button[type='submit']").show();
+
+					console.log(err);
 				}
 			});
 		}
