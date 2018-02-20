@@ -2095,3 +2095,17 @@ button[type=submit]:hover {
 	background: #6F4DE1;
 	border: 0;
 }
+
+/* services */
+div#software-section{
+	padding-top: 50px;
+}
+div.services-list div.single-start-box div.start-icon i{
+	font-size: 80px;
+}
+div.services-list div.top-title.started-title p{
+	color: #4f4f6f;
+}
+div.services-list div.single-start-box p{
+	color: #4f4f6f;
+}

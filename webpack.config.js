@@ -17,7 +17,7 @@ var files = [
 
 	// CSS
 	'./assets/css/bootstrap.min.css',
-	'./assets/css/font-awesome.min.css',
+	'./assets/css/fontawesome-all.min.css',
 	'./assets/css/owl.carousel.min.css',
 	'./assets/css/modal-video.min.css',
 	'./assets/css/animate.css',
