@@ -15,7 +15,7 @@ jQuery(document).ready(function ($)
 	let contactForm = new ContactForm(Routing);
 
 	// init contact page events
-	if(currentRoute == "/contacto") contactForm.contactSectionEvents();
+	if(currentRoute == "/contacto") contactForm.contactSectionEvents(Routing);
 
 	// home contact form
 	$("form#home-contact-form").on("submit", function(event)
@@ -68,122 +68,12 @@ jQuery(document).ready(function ($)
 		}
 	});
 
-	//Feautes Slider
-	$(".features-slider").owlCarousel({
-		items: 1,
-		loop: true,
-		nav: true,
-		autoplay: true,
-		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-		animateIn: 'fadeIn',
-		animateOut: 'fadeOut',
-	});
-
-
-	//Feautes Slider
-	$(".testimonial-slider").owlCarousel({
-		items: 1,
-		loop: true,
-		nav: false,
-		dots: true,
-		autoplay: true,
-		animateIn: 'fadeIn',
-		animateOut: 'fadeOut',
-	});
-
-
-	//Single Blog Slider
-	$(".singleblog-slider").owlCarousel({
-		items: 1,
-		loop: true,
-		nav: true,
-		//		autoplay: true,
-		animateIn: 'fadeIn',
-		animateOut: 'fadeOut',
-		navText: [
-			"<i class='fa fa-arrow-left'></i>previous post",
-			"next post <i class='fa fa-arrow-right'></i>"
-		],
-		dots: false,
-		mouseDrag: false,
-	});
-
-
-
-	//Articles Slider
-	$(".articles-slider").owlCarousel({
-		center: true,
-		items: 2,
-		loop: true,
-		margin: 50,
-		autoplay: true,
-		responsiveClass: true,
-		dots: true,
-		responsive: {
-			0: {
-				items: 1,
-			},
-			600: {
-				items: 1,
-			},
-			1000: {
-				items: 2,
-			}
-		}
-	});
-	//Single-blog Slider
-	$(".single-blog-slider").owlCarousel({
-		items: 2,
-		loop: true,
-		margin: 50,
-		//		autoplay: true,
-		responsiveClass: true,
-		dots: true,
-		responsive: {
-			0: {
-				items: 1,
-			},
-			767: {
-				items: 1,
-			},
-			600: {
-				items: 1,
-			},
-			1000: {
-				items: 2,
-			}
-		}
-	});
-
-	//Articles Slider
-	$(".hero-slider-area").owlCarousel({
-		items: 3,
-		loop: true,
-		dots: true,
-		responsiveClass: true,
-		responsive: {
-			0: {
-				items: 1,
-			},
-			600: {
-				items: 2,
-			},
-			1000: {
-				items: 3,
-			}
-		}
-	});
-
-
-	//popup Modal Video
-	$(".js-modal-btn").modalVideo();
 	//Prevent default behavior of Anchor tag
 	$("a.js-modal-btn").click(function (event) {
 		return false;
 	});
 
-
-	//Click to scroll to next section
+	// Click to scroll to next section
 	$('.scrl-down').on('click', function (e) {
 		e.preventDefault();
 		$('html, body').animate({
@@ -191,7 +81,7 @@ jQuery(document).ready(function ($)
 		}, 500, 'linear');
 	});
 
-	//On click change footer menu active
+	// On click change footer menu active
 	$(".footer-menu li").on("click", function () {
 		$(".footer-menu li").removeClass("active");
 		$(this).addClass("active");
@@ -205,20 +95,11 @@ jQuery(document).ready(function ($)
 			$('.back-to-top').fadeOut();
 		}
 	});
+
 	$(".back-to-top").click(function () {
 		$("html, body").animate({
 			scrollTop: 0
 		}, 1000);
 	});
-
-	//Loadmore
-	$(function () {
-		$(".blogs-load").slice(0, 9).show();
-		$(".all-blogs").on('click', function (e) {
-			e.preventDefault();
-			$(".blogs-load:hidden").slice(0, 3).slideDown();
-		});
-	});
-
 
 });

@@ -12,6 +12,7 @@ var files = [
 	'./assets/js/owl.carousel.min.js',
 	'./assets/js/popper.min.js',
 	'./assets/js/prefixfree.min.js',
+	'./assets/js/defaultContactForm.js',
 	'./assets/js/contactForm.js',
 	'./assets/js/main.js',
 
