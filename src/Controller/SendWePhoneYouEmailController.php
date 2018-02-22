@@ -14,7 +14,7 @@
 			$name 		= $request->request->get("name");
 			$phone 		= $request->request->get("phone");
 			$schedule	= $request->request->get("schedule");
-			$mssg		= $request->request->get("msgg");
+			$product	= $request->request->get("product");
 
 			if( empty($name) || empty($phone) || empty($schedule) )
 			{
@@ -26,7 +26,7 @@
 						<p><strong>Nombre: </strong>" . $name . "</p>
 						<p><strong>Teléfono: </strong>" . $phone . "</p>
 						<p><strong>Horario de llamada: </strong>" . $schedule . "</p>
-						<p><strong>Interesado en: </strong>" . $mssg . "</p>
+						<p><strong>Interesado en: </strong>" . $product . "</p>
 						<p><strong>Fecha: </strong>" . ( new \DateTime() )->format('d/m/Y H:i:s') . "</p>
 						";
 

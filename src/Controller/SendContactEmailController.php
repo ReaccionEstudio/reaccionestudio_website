@@ -13,6 +13,7 @@
 			$subject 	= "Contacto Reaccion Estudio";
 			$name 		= $request->request->get("name");
 			$email 		= $request->request->get("email");
+			$schedule	= $request->request->get("schedule");
 			$mssg 		= $request->request->get("mssg");
 
 			if( empty($name) || empty($email) || empty($mssg) )

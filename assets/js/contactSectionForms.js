@@ -1,4 +1,5 @@
-import DefaultContactForm from './defaultContactForm.js';
+import DefaultContactForm 	from './defaultContactForm.js';
+import WePhoneYouEmail 		from './wePhoneYouEmail.js';
 
 class ContactSectionForms
 {
@@ -17,24 +18,37 @@ class ContactSectionForms
 			_self.mainContactForm();
 		});
 
-		// this.wePhoneYouForm();
+		$("form#we-phone-you-form").on("submit", function(e)
+		{
+			this.wePhoneYouForm();
+		});
 	}
 
 	mainContactForm()
 	{
+		let formSelector = "form#contact-form";
 		let defaultContactForm = new DefaultContactForm();
 			defaultContactForm.sendEmail(
-				"form#contact-form", 
-				$("form#contact-form input#fullname"), 
-				$("form#contact-form input#email"), 
-				$("form#contact-form textarea#message"), 
+				formSelector,
+				$(formSelector + " input#fullname"), 
+				$(formSelector + " input#email"), 
+				$(formSelector + " textarea#message"), 
 				this.routing.generate('sendContactEmail')
 			);
 	}
 
 	wePhoneYouForm()
 	{
-
+		let formSelector 	= "form#we-phone-you-form";
+		let wePhoneYouEmail = new WePhoneYouEmail();
+			wePhoneYouEmail.sendEmail(
+				this.routing.generate("wePhoneYouEmail"),
+				formSelector,
+				$(formSelector + " input#wePhoneYou_name"),
+				$(formSelector + " input#wePhoneYou_phone"),
+				$(formSelector + " input#wePhoneYou_schedule"),
+				$(formSelector + " input#wePhoneYou_product")
+			);
 	}
 }
 
