@@ -20,7 +20,8 @@ class ContactSectionForms
 
 		$("form#we-phone-you-form").on("submit", function(e)
 		{
-			this.wePhoneYouForm();
+			e.preventDefault();
+			_self.wePhoneYouForm();
 		});
 	}
 
@@ -39,10 +40,10 @@ class ContactSectionForms
 
 	wePhoneYouForm()
 	{
-		let formSelector 	= "form#we-phone-you-form";
-		let wePhoneYouEmail = new WePhoneYouEmail();
-			wePhoneYouEmail.sendEmail(
-				this.routing.generate("wePhoneYouEmail"),
+		let formSelector = "form#we-phone-you-form";
+		let wePhoneYou = new WePhoneYouEmail();
+			wePhoneYou.sendEmail(
+				this.routing.generate('wePhoneYouEmail'),
 				formSelector,
 				$(formSelector + " input#wePhoneYou_name"),
 				$(formSelector + " input#wePhoneYou_phone"),

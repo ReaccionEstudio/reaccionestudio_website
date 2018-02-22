@@ -3,15 +3,12 @@ var Encore = require('@symfony/webpack-encore');
 var files = [
 
 	// JS
-	//'./assets/js/jquery.3.2.1.min.js',
 	'./assets/js/jquery.nice-select.js',
 	'./assets/js/bootstrap.min.js',
 	'./assets/js/loadmore.js',
-	'./assets/js/modal-video.js',
-	'./assets/js/niceselect-activate.js',
-	'./assets/js/owl.carousel.min.js',
 	'./assets/js/popper.min.js',
 	'./assets/js/prefixfree.min.js',
+	'./assets/js/wePhoneYouEmail.js',
 	'./assets/js/defaultContactForm.js',
 	'./assets/js/contactForm.js',
 	'./assets/js/main.js',
