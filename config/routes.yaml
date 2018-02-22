@@ -17,5 +17,12 @@ sendContactEmail:
     options:
       expose: true
 
+wePhoneYouEmail:
+    path: /we-phone-you-email
+    controller: App\Controller\SendWePhoneYouEmailController::index
+    methods: POST
+    options:
+      expose: true
+
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
