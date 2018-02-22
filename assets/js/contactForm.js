@@ -1,3 +1,5 @@
+import ContactSectionForms from './contactSectionForms.js';
+
 class ContactForm
 {
 	constructor(routing)
@@ -73,6 +75,12 @@ class ContactForm
 			if( ! email.val().length) 	email.addClass("is-invalid");
 			if( ! mssg.val().length) 	mssg.addClass("is-invalid");
 		}
+	}
+
+	contactSectionEvents()
+	{
+		let contactSectionForms = new ContactSectionForms();
+		contactSectionForms.events();
 	}
 }
 

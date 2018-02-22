@@ -1,6 +1,7 @@
 /* FOSJsRoutingBundle */
 
-const routes = require('../../public/js/fos_js_routes.json');
+const currentRoute 	= window.location.pathname;
+const routes 		= require('../../public/js/fos_js_routes.json');
 
 import Routing 		from '../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
 import ContactForm 	from './contactForm.js';
@@ -11,13 +12,16 @@ Routing.setRoutingData(routes);
 
 jQuery(document).ready(function ($) 
 {
+	let contactForm = new ContactForm(Routing);
+
+	// init contact page events
+	if(currentRoute == "/contacto") contactForm.contactSectionEvents();
+
 	// home contact form
 	$("form#home-contact-form").on("submit", function(event)
 	{
 		event.preventDefault();
-
-		let contactForm = new ContactForm(Routing);
-			contactForm.homeContactFormEvent();
+		contactForm.homeContactFormEvent();
 	});
 
 	//navbar click add class active
