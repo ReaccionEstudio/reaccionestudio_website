@@ -842,7 +842,9 @@ a.scroll-down:hover {
 }
 
 div.tech-area div.team-title p,
-div.contact-area div.start-title p
+div.contact-area div.start-title p,
+div.contact-area-section div.start-title p,
+div.we-phone-you div.start-title p
 {
 	color: #4f4f6f;
 }
@@ -887,12 +889,15 @@ div.contact-area div.start-title p
 	border-bottom-left-radius: 5px;
 	transition: 0.5s
 }
-
-.article-area {
+.article-area{
 	padding: 100px 0 150px;
 	background: #f9fafc;
 }
-
+.we-phone-you {
+	padding: 100px 0 150px;
+	background: #f9fafc;
+	border-top:1px solid #e3e6ee;
+}
 .articles-inner:hover .articles-bg {
 	width: 160px;
 }
@@ -1755,13 +1760,14 @@ i.user-comments.cmnts-color-two {
 .get-start.header-area {
 	
 }
-
-
+.contact-area-section{
+	background: #FFF;
+	padding: 100px 0;
+}
 .contact-area {
 	background: #f9fafc;
 	padding: 100px 0;
 }
-
 .start-title h6 {
 	color: #9fa4af;
 	font-size: 14px;
@@ -2108,4 +2114,10 @@ div.services-list div.top-title.started-title p{
 }
 div.services-list div.single-start-box p{
 	color: #4f4f6f;
+}
+.whatsapp{
+	color: green;
+}
+div.we-phone-you{
+
 }
