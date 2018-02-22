@@ -894,9 +894,15 @@ div.we-phone-you div.start-title p
 	background: #f9fafc;
 }
 .we-phone-you {
-	padding: 100px 0 150px;
+	padding: 50px 0 100px 0;
 	background: #f9fafc;
 	border-top:1px solid #e3e6ee;
+}
+div.we-phone-you form label,
+div.contact-area-section form label,
+div.we-phone-you div.started-title h2, 
+div.we-phone-you div.started-title p {
+	color: #4f4f6f !important;
 }
 .articles-inner:hover .articles-bg {
 	width: 160px;
