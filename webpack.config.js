@@ -11,6 +11,7 @@ var files = [
 	'./assets/js/wePhoneYouEmail.js',
 	'./assets/js/defaultContactForm.js',
 	'./assets/js/contactForm.js',
+	'./assets/js/cookieconsent.min.js',
 	'./assets/js/main.js',
 
 	// CSS
@@ -23,6 +24,7 @@ var files = [
 	'./assets/css/nice-select.css',
 	'./assets/css/style.css',
 	'./assets/css/responsive.css',
+	'./assets/css/cookieconsent.min.css',
 	'./node_modules/devicon/devicon.min.css',
 	'./node_modules/devicon/devicon-colors.css'
 

@@ -102,4 +102,22 @@ jQuery(document).ready(function ($)
 		}, 1000);
 	});
 
+	// cookies consent
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#3937a3"
+        },
+        "button": {
+          "background": "#e62576"
+        }
+      },
+      "theme": "edgeless",
+      "content": {
+        "message": "Este sitio web utiliza cookies para que usted tenga la mejor experiencia de usuario. Si continúa navegando está dando su consentimiento para la aceptación de las mencionadas cookies y de nuestra política de cookies.",
+        "dismiss": "Aceptar",
+        "link": "Más información",
+        "href": "https://www.reaccionestudio.com/politica-cookies.html"
+      }
+    });
 });
