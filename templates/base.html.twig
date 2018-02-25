@@ -5,6 +5,7 @@
         
         <meta charset="UTF-8">
         <title>{% block title %}Reacción Estudio {% if seo is defined and seo.title is not empty %}- {{ seo.title }}{% endif %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% if seo is defined and seo.description is not empty %}
         <meta name="description" content="{{ seo.description }}" />
         {% endif %}
