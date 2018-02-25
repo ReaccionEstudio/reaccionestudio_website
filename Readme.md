@@ -13,4 +13,6 @@ Reaccion Estudio Website
         bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json
 
 
+- **Build webpack assets**
 
+        ./node_modules/.bin/encore dev
