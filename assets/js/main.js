@@ -12,6 +12,10 @@ Routing.setRoutingData(routes);
 
 jQuery(document).ready(function ($) 
 {
+	// remove display-block in collapsed menu in small devices
+	let navbarMenuContent = $("div#navbarSupportedContent").css("display");
+	if(navbarMenuContent == "block") $("div#navbarSupportedContent").css("display", "");
+
 	let contactForm = new ContactForm(Routing);
 
 	// init contact page events
@@ -24,7 +28,7 @@ jQuery(document).ready(function ($)
 		contactForm.homeContactFormEvent();
 	});
 
-	//navbar click add class active
+	// navbar click add class active
 	$(".navbar-nav").on("click", "li", function () {
 		$(".navbar-nav li").removeClass("active");
 		$(this).addClass("active");

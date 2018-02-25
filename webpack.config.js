@@ -3,7 +3,6 @@ var Encore = require('@symfony/webpack-encore');
 var files = [
 
 	// JS
-	'./assets/js/jquery.nice-select.js',
 	'./assets/js/bootstrap.min.js',
 	'./assets/js/loadmore.js',
 	'./assets/js/popper.min.js',
@@ -18,10 +17,8 @@ var files = [
 	'./assets/css/bootstrap.min.css',
 	'./assets/css/fontawesome-all.min.css',
 	'./assets/css/owl.carousel.min.css',
-	'./assets/css/modal-video.min.css',
 	'./assets/css/animate.css',
 	'./assets/css/normalize.css',
-	'./assets/css/nice-select.css',
 	'./assets/css/style.css',
 	'./assets/css/responsive.css',
 	'./assets/css/cookieconsent.min.css',
