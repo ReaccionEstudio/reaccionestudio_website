@@ -2124,6 +2124,15 @@ div.services-list div.single-start-box p{
 .whatsapp{
 	color: green;
 }
-div.we-phone-you{
-
+.navbar-locked{
+	background: rgb(115, 98, 222) none repeat scroll 0% 0%;
+	transition: all 0.3s ease-in-out 0s;
+	height: 60px;
+}
+.single-post-area .data-section p{
+	color: #000 !important;	
+}
+.single-post-area .data-section a{
+	color: #2c2c47 !important;
+	text-decoration: underline;
 }

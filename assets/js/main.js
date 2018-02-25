@@ -31,42 +31,47 @@ jQuery(document).ready(function ($)
 	});
 
 
-	//On scroll header add background
-	$(window).scroll(function () {
-		var a = 10;
-		var pos = $(window).scrollTop();
-		if (pos > a) {
-			$(".header-top .navbar").css({
-				background: '#7362de',
-				transition: 'all 0.3s ease-in-out',
-				height: 60,
-			});
-			$(".header-top .navbar").addClass("animated slideInDown");
-		} else {
-			$(".header-top .navbar").css({
-				background: 'transparent'
-			});
-			$(".header-top .navbar").removeClass("animated slideInDown");
-		}
-	});
+	// On scroll header add background
+	if( ! $("nav.navbar").hasClass("navbar-locked") ) 
+	{
 
-	$(window).scroll(function () {
-		var a = 10;
-		var pos = $(window).scrollTop();
-		if (pos > a) {
-			$(".articles .header-top .navbar").css({
-				background: '#fff',
-				transition: 'all 0.3s ease-in-out',
-				height: 60,
-			});
-			$(".articles .header-top .navbar").addClass("animated slideInDown");
-		} else {
-			$(".articles .header-top .navbar").css({
-				background: '#fff'
-			});
-			$(".articles .header-top .navbar").removeClass("animated slideInDown");
-		}
-	});
+		$(window).scroll(function () {
+			var a = 10;
+			var pos = $(window).scrollTop();
+			if (pos > a) {
+				$(".header-top .navbar").css({
+					background: '#7362de',
+					transition: 'all 0.3s ease-in-out',
+					height: 60,
+				});
+				$(".header-top .navbar").addClass("animated slideInDown");
+			} else {
+				$(".header-top .navbar").css({
+					background: 'transparent'
+				});
+				$(".header-top .navbar").removeClass("animated slideInDown");
+			}
+		});
+
+		$(window).scroll(function () {
+			var a = 10;
+			var pos = $(window).scrollTop();
+			if (pos > a) {
+				$(".articles .header-top .navbar").css({
+					background: '#fff',
+					transition: 'all 0.3s ease-in-out',
+					height: 60,
+				});
+				$(".articles .header-top .navbar").addClass("animated slideInDown");
+			} else {
+				$(".articles .header-top .navbar").css({
+					background: '#fff'
+				});
+				$(".articles .header-top .navbar").removeClass("animated slideInDown");
+			}
+		});
+
+	}
 
 	//Prevent default behavior of Anchor tag
 	$("a.js-modal-btn").click(function (event) {
@@ -117,7 +122,7 @@ jQuery(document).ready(function ($)
         "message": "Este sitio web utiliza cookies para que usted tenga la mejor experiencia de usuario. Si continúa navegando está dando su consentimiento para la aceptación de las mencionadas cookies y de nuestra política de cookies.",
         "dismiss": "Aceptar",
         "link": "Más información",
-        "href": "https://www.reaccionestudio.com/politica-cookies.html"
+        "href": "https://www.reaccionestudio.com/politica-de-cookies"
       }
     });
 });

@@ -6,6 +6,10 @@ contact:
     path: /contacto
     controller: App\Controller\ContactController::index
 
+cookies:
+    path: /politica-de-cookies
+    controller: App\Controller\TermsPagesController::cookies
+
 services:
     path: /servicios
     controller: App\Controller\ServicesController::index
