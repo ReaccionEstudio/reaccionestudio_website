@@ -1,0 +1,37 @@
+.author.vcard{
+	color: #4f4f6f;
+}
+div.single-blog-post div.description{
+	color: #4f4f6f;
+}
+.blog-meta h1,
+.blog-meta h1 a {
+	color: #4f4f6f;
+	font-size: 24px;
+	margin-bottom: 2px;
+}
+div.single-blog-post a ,
+.blog-comments a {
+	color: #4f4f6f;	
+}
+a.blog-nav-button{
+	font-size: 13px !important;
+	width: 200px !important;
+	color: #FFF !important;
+}
+a.blog-nav-button:hover{
+	color: #000 !important;
+}
+div#blog-slider div.control-text h1 a{
+	color: #FFF;
+}
+div.single-blog-post-no-borders{
+	box-shadow: none !important;
+	border-radius: none !important;
+}
+div.mg-top-20{
+	margin-top: 20px;
+}
+div.blogs-load{
+	display: block !important;
+}

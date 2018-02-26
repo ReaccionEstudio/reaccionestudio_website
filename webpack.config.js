@@ -22,6 +22,7 @@ var files = [
 	'./assets/css/style.css',
 	'./assets/css/responsive.css',
 	'./assets/css/cookieconsent.min.css',
+	'./assets/css/blog.custom.css',
 	'./node_modules/devicon/devicon.min.css',
 	'./node_modules/devicon/devicon-colors.css'
 
