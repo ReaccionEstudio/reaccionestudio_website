@@ -2136,3 +2136,6 @@ div.services-list div.single-start-box p{
 	color: #2c2c47 !important;
 	text-decoration: underline;
 }
+.cc-window{
+	z-index:99999999999;
+}
