@@ -4,7 +4,8 @@
   "description": "Reaccion Estudio Website ====================",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "encore-dev" : "./node_modules/.bin/encore dev"
   },
   "repository": {
     "type": "git",
