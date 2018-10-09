@@ -29,14 +29,38 @@
 						<p><strong>Fecha: </strong>" . ( new \DateTime() )->format('d/m/Y H:i:s') . "</p>
 						";
 
-			$message = ( new \Swift_Message($subject) )
-							->setFrom("info@reaccionestudio.com")
-							->setTo("info@reaccionestudio.com")
-							->setBody($mssgBody,"text/html")
-						;
+			// send slack message
+			try
+			{
+				$slackMssgBody = str_replace("<p>", "\n", $mssgBody);
+				$slackMssgBody = strip_tags($slackMssgBody);
 
-			$res 	= $mailer->send($message);
-			$status = ($res) ? "OK" : "KO";
+				$slack = $this->get('nexy_slack.client');
+				$slackMessage = $slack->createMessage()->setText($slackMssgBody);
+				$slack->sendMessage($slackMessage);
+			}
+			catch(\Exception $e)
+			{
+				// TODO: log error ...
+			}
+
+			// send email message
+			try
+			{
+				$message = ( new \Swift_Message($subject) )
+								->setFrom("info@reaccionestudio.com")
+								->setTo("info@reaccionestudio.com")
+								->setBody($mssgBody,"text/html")
+							;
+
+				$mailer->send($message);
+
+				$status = "OK";
+			}
+			catch(\Exception $e)
+			{
+				$status = "KO";
+			}
 
 			return new JsonResponse([ "STATUS" => $status ]);
 		}
