@@ -194,9 +194,31 @@
 		bottom: -70px;
 		top: auto;
 	}
-
 	.features-slider .owl-nav div.owl-next {
 		left: 30px;
+	}
+	div#contact-us-page-slider div.control-text{
+		margin-top: 60px !important
+	}
+	div.contact-area-section{
+		padding: 30px 0;
+	}
+	div.contact-area-section div.contact-form{
+		padding-left: 0;
+	}
+	div.contact-area-section div.contact-form div.contact-form-submit-btn,
+	div.we-phone-you form#we-phone-you-form div.we-phone-you-form-submit-btn {
+		text-align: center;
+	}
+	div.contact-area-section div.contact-form div.contact-form-submit-btn button, 
+	div.we-phone-you form#we-phone-you-form div.we-phone-you-form-submit-btn button {
+		margin: 0;
+	}
+	div#we-phone-you div.contact-form{
+		padding: 0;
+	}
+	div#we-phone-you{
+		padding: 50px 0;
 	}
 }
 
