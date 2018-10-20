@@ -137,6 +137,42 @@
 }
 
 @media (max-width: 767px) {
+
+	.choose-us{
+		padding: 30px 0;
+	}
+
+	div#contact-section .contact-form{
+		padding-left: 0px;
+	}
+
+	div.contact-area{
+		padding: 30px 0;
+	}
+
+	div.contact-area form#home-contact-form div.contact-form-btn-submit{
+		text-align: center;
+	}
+	div.contact-area form#home-contact-form div.contact-form-btn-submit button{
+		margin: 0;
+	}
+
+	div.tech-area{
+		padding: 30px 0;
+	}
+
+	div#tech-section div.technologies-row-content{
+		padding-top: 20px;
+	}
+
+	div.features-top{
+		margin-bottom: 40px;
+	}
+
+	div.features-area{
+		padding: 30px;
+	}
+
 	.mainmenu ul {
 		width: 100%;
 	}
@@ -165,6 +201,7 @@
 }
 
 @media (max-width: 479px) {
+
 	.features-slider .owl-nav div {
 		left: 0;
 		top: auto;

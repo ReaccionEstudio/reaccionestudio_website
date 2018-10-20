@@ -260,7 +260,7 @@ a.scroll-down:hover {
 
 .choose-us {
 	background: #ecf0f4;
-	padding: 200px 0;
+	padding: 80px 0;
 	position: relative;
 	z-index: 1;
 }
@@ -330,7 +330,7 @@ a.scroll-down:hover {
 	background: linear-gradient(135deg, rgba(110, 69, 226, 1) 0%, rgba(136, 211, 206, 1) 99%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e45e2', endColorstr='#88d3ce', GradientType=1);
 	color: #fff;
-	padding: 120px 0 0;
+	padding: 70px 0 0;
 }
 
 .single-feature-items i.fa {
@@ -826,7 +826,7 @@ a.scroll-down:hover {
 }
 
 .tech-area {
-	padding: 120px 0;
+	padding: 70px 0;
 	border-bottom: 1px solid #e3e6ee;
 	position: relative;
 	z-index: 2;
