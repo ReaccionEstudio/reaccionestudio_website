@@ -54,7 +54,7 @@
 
                 // Save contact log
                 $context = [ 'message' => $mssgBody ];
-                $logger->info('Contact message sent to TelegramBot.', $context);
+                $logger->alert('Contact message sent to TelegramBot.', $context);
 			}
 			catch(\Exception $e)
 			{
