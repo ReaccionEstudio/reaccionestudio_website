@@ -18,6 +18,7 @@ class DefaultContactForm
 			{
 				type: 	"POST",
 				url: 	sendEmailRoute,
+				dataType: 'json',
 				data: {
 					"name" 	: name.val(),
 					"email" : email.val(),
@@ -25,7 +26,8 @@ class DefaultContactForm
 				},
 				success: function(result)
 				{
-					if(result.STATUS == "OK")
+					console.log(result);
+					if(result.ok === true)
 					{
 						$(formSelector).prepend(
 							'<div class="alert alert-success">\

@@ -2,18 +2,29 @@
 
 	namespace App\Controller;
 
-	use Symfony\Component\HttpFoundation\JsonResponse;
+	use Psr\Log\LoggerInterface;
+    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+    use Symfony\Component\HttpFoundation\JsonResponse;
 	use Symfony\Component\HttpFoundation\Request;
-	use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Telegram;
 
-	class SendContactEmailController extends Controller
+    /**
+     * Class SendContactEmailController
+     * @package App\Controller
+     */
+    class SendContactEmailController extends AbstractController
 	{
-		public function index(Request $request, \Swift_Mailer $mailer )
+        /**
+         * @param Request $request
+         * @param LoggerInterface $logger
+         * @return JsonResponse
+         * @throws \Exception
+         */
+        public function index(Request $request, LoggerInterface $logger)
 		{
 			$subject 	= "Contacto Reaccion Estudio";
 			$name 		= $request->request->get("name");
 			$email 		= $request->request->get("email");
-			$schedule	= $request->request->get("schedule");
 			$mssg 		= $request->request->get("mssg");
 
 			if( empty($name) || empty($email) || empty($mssg) )
@@ -29,39 +40,28 @@
 						<p><strong>Fecha: </strong>" . ( new \DateTime() )->format('d/m/Y H:i:s') . "</p>
 						";
 
-			// send slack message
 			try
 			{
-				$slackMssgBody = str_replace("<p>", "\n", $mssgBody);
-				$slackMssgBody = strip_tags($slackMssgBody);
+			    // Send message to TelegramBot
+                $mssgBody = strip_tags($mssgBody);
 
-				$slack = $this->get('nexy_slack.client');
-				$slackMessage = $slack->createMessage()->setText($slackMssgBody);
-				$slack->sendMessage($slackMessage);
+                $botKey = $this->getParameter('telegram_bot_key');
+                $botChatId = $this->getParameter('telegram_bot_chat_id');
+
+                $telegram = new Telegram($botKey);
+                $content = array('chat_id' => $botChatId, 'text' => $mssgBody);
+                $telegram->sendMessage($content);
+
+                // Save contact log
+                $context = [ 'message' => $mssgBody ];
+                $logger->info('Contact message sent to TelegramBot.', $context);
 			}
 			catch(\Exception $e)
 			{
-				// TODO: log error ...
+			    $context = [ 'message' => $mssgBody, 'exception' => $e ];
+				$logger->error('Error sending contact message to TelegramBot.', $context);
 			}
 
-			// send email message
-			try
-			{
-				$message = ( new \Swift_Message($subject) )
-								->setFrom("info@reaccionestudio.com")
-								->setTo("info@reaccionestudio.com")
-								->setBody($mssgBody,"text/html")
-							;
-
-				$mailer->send($message);
-
-				$status = "OK";
-			}
-			catch(\Exception $e)
-			{
-				$status = "KO";
-			}
-
-			return new JsonResponse([ "STATUS" => $status ]);
+			exit;
 		}
 	}

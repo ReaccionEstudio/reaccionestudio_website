@@ -10,5 +10,4 @@ return [
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
     Http\HttplugBundle\HttplugBundle::class => ['all' => true],
-    Nexy\SlackBundle\NexySlackBundle::class => ['all' => true],
 ];

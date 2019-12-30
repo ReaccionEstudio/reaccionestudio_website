@@ -2,6 +2,8 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
+    telegram_bot_key: '%env(TELEGRAM_BOT_KEY)%'
+    telegram_bot_chat_id: '%env(TELEGRAM_BOT_CHAT_ID)%'
 
 services:
     # default configuration for services in *this* file

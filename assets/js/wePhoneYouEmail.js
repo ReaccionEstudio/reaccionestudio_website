@@ -18,6 +18,7 @@ class WePhoneYouEmail
 			{
 				type: 	"POST",
 				url: 	ctrlRoute,
+				dataType: 'json',
 				data: {
 					"name" 		: name.val(),
 					"phone" 	: phone.val(),
@@ -26,7 +27,7 @@ class WePhoneYouEmail
 				},
 				success: function(result)
 				{
-					if(result.STATUS == "OK")
+					if(result.ok === true)
 					{
 						$(formSelector).prepend(
 							'<div class="alert alert-success">\
