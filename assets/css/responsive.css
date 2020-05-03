@@ -241,4 +241,8 @@
 		margin-left: -37px;
 		margin-top: 12px;
 	}
+
+	div#blog-slider div.control-text{
+		margin-top: 0 !important;
+	}
 }

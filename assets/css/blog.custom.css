@@ -35,3 +35,10 @@ div.mg-top-20{
 div.blogs-load{
 	display: block !important;
 }
+
+div#blog-slider{
+	max-height:300px !important;
+}
+div#blog-slider div.control-text{
+	margin-top: 90px !important;
+}

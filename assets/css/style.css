@@ -13,8 +13,8 @@ button:focus {
 }
 
 a:link a:active,
-a:visited,
-	{
+a:visited
+{
 	text-decoration: none !important;
 }
 
@@ -2138,10 +2138,4 @@ div.services-list div.single-start-box p{
 }
 .cc-window{
 	z-index:99999999999;
-}
-div#blog-slider{ 
-	max-height:300px !important; 
-} 
-div#blog-slider div.control-text{ 
-	margin-top: 90px !important; 
 }
