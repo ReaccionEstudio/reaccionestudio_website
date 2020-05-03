@@ -40,5 +40,5 @@ div#blog-slider{
 	max-height:300px !important;
 }
 div#blog-slider div.control-text{
-	margin-top: 90px !important;
+	margin-top: 90px;
 }
